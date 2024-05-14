@@ -61,6 +61,59 @@ a:active {
     color: #0a3fd9;
 }
 
+/* MOBILE MENU */
+.dropbtn {
+  background-color: #0a3fd9;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.mobileHamb {
+  position: relative;
+  display: inline-block;
+}
+
+.mobileHamb-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0; /* Posiziona il dropdown a destra */
+  top: calc(100% + 10px); /* Sposta il dropdown verso l'alto */
+}
+
+.mobileHamb-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.mobileHamb-content a:hover {
+    background-color: #ddd;
+}
+
+.mobileHamb:hover .mobileHamb-content {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    nav {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .mobileHamb {
+        display: none;
+    }
+}
+
+
 img {
     pointer-events: none;
     /* Disabilitare drag and drop delle immagini all'interno di tutte le pagine */
